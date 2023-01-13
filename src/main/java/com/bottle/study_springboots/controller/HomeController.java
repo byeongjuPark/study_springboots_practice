@@ -5,6 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
+    @RequestMapping(value = {"", "/", "/main"})
+    public String main(){
+        System.out.println("main");
+        return "WEB-INF/views/main.jsp"; //jasper가 해석해서 인식
+    }
+
     @RequestMapping(value = "/home") // http://localhost:8080/home
     public void home(){
         System.out.println("Active HomeController");

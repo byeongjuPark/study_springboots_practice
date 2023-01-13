@@ -10,6 +10,12 @@
 
 <body>
     <div>/board/form</div>
+    <form action="/board/form" method="post">
+        <div>
+            <input type="text" name="title" id="">
+        </div>
+        <button>Submit</button>
+    </form>
 </body>
 
 </html>
