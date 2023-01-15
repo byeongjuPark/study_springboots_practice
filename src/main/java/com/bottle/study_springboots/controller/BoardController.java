@@ -26,9 +26,10 @@ public class BoardController {
         ModelAndView modelAndView = new ModelAndView();
         DataInfors dataInfors = new DataInfors();
         ArrayList<BoardBean> boardList = dataInfors.getDataListWithBoardBean();
+
         modelAndView.addObject("boardList", boardList);
-        
         modelAndView.setViewName("board/list");
+
         return modelAndView;
     }
 
@@ -36,8 +37,8 @@ public class BoardController {
     public ModelAndView view(@RequestParam String title, ModelAndView modelAndView) {
         DataInfors dataInfors = new DataInfors();
         BoardBean boardBean = dataInfors.getDataWithMemberBean(title);
-        modelAndView.addObject("boardBean", boardBean);
 
+        modelAndView.addObject("boardBean", boardBean);
         modelAndView.setViewName("board/view");
 
         return modelAndView;
@@ -47,12 +48,13 @@ public class BoardController {
     public ModelAndView form(ModelAndView modelAndView) {
         System.out.println("board/form");
         modelAndView.setViewName("board/form");
+
         return modelAndView;
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)    
     public ModelAndView save(ModelAndView modelAndView) {
-        // insert biz
         modelAndView.setViewName("board/list");
+        
         return modelAndView;
     }
 }
