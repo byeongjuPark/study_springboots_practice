@@ -5,26 +5,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-    @RequestMapping(value = {"", "/", "/main"})
+    @RequestMapping(value = {"", "/", "/main"})    // http://localhost:8080/homejsp
     public String main(){
-        System.out.println("main");
-        return "WEB-INF/views/main.jsp"; //jasper가 해석해서 인식
+        int i = 0;
+        return "/main";
     }
-
-    @RequestMapping(value = "/home") // http://localhost:8080/home
+    @RequestMapping(value = "/home")    // http://localhost:8080/homejsp
     public void home(){
-        System.out.println("Active HomeController");
+        int i = 0;
     }
-
-    @RequestMapping(value = "/homejsp") // http://localhost:8080/home
+    @RequestMapping(value = "/homejsp")    // http://localhost:8080/homejsp
     public String homejsp(){
-        System.out.println("Active HomeController");
-        return "WEB-INF/views/home.jsp"; //jasper가 해석해서 인식
+        int i = 0;
+        return "home";
     }
-
-    @RequestMapping(value = "/homehtml") // http://localhost:8080/home
+    @RequestMapping(value = "/homehtml")    // http://localhost:8080/homehtml
     public String homehtml(){
-        System.out.println("Active HomeController");
-        return "WEB-INF/views/home.html"; //html은 해석 안함
+        int i = 0;
+        return "home.html";
     }
 }
