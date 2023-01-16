@@ -1,7 +1,11 @@
 package com.bottle.study_springboots.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 
 @Controller
 public class HomeController {
@@ -24,4 +28,18 @@ public class HomeController {
         int i = 0;
         return "home.html";
     }
+
+    @RequestMapping(value = "/jstlformats")    // http://localhost:8080/homehtml
+    public String jstlformats(){
+        
+        return "jstl_formats";
+    }
+
+    @RequestMapping(value = "/user/{age}/{name}", method = RequestMethod.GET)
+    public ModelAndView getView(@PathVariable String age, @PathVariable String name, ModelAndView mv){
+        System.out.println(age+"살" + name);
+        mv.setViewName("board/form");
+        return mv;
+    }
+    
 }

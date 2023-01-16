@@ -1,6 +1,7 @@
 package com.bottle.study_springboots.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,7 +53,7 @@ public class BoardController {
         return modelAndView;
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)    
-    public ModelAndView save(ModelAndView modelAndView) {
+    public ModelAndView save(@RequestParam HashMap<String, String> params, ModelAndView modelAndView) {
         modelAndView.setViewName("board/list");
         
         return modelAndView;

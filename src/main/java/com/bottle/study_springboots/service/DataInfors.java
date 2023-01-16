@@ -1,6 +1,7 @@
 package com.bottle.study_springboots.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.bottle.study_springboots.beans.BoardBean;
 
@@ -48,5 +49,19 @@ public class DataInfors {
         boardBean.setUserName("@mdo");
 
         return boardBean;
+    }
+    public BoardBean addDataBean(HashMap<String,String> hashMap) {
+        String title = hashMap.get("title");
+        String content = hashMap.get("content");
+        String userName = hashMap.get("userName");
+        String date = hashMap.get("date");
+
+        BoardBean bean = new BoardBean();
+        bean.setTitle(title);
+        bean.setContent(content);
+        bean.setUserName(userName);
+        bean.setDate(date);
+
+        return bean;
     }
 }
