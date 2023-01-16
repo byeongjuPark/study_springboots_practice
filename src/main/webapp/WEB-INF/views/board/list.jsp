@@ -38,7 +38,7 @@
         </table>
 
         <div>
-            <form action="/board_our/form"><button>form</button></form>
+            <form action="/board/form"><button>form</button></form>
         <div>
             </div>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

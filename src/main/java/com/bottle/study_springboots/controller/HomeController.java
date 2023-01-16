@@ -8,7 +8,7 @@ public class HomeController {
     @RequestMapping(value = {"", "/", "/main"})    // http://localhost:8080/homejsp
     public String main(){
         int i = 0;
-        return "/main";
+        return "main";
     }
     @RequestMapping(value = "/home")    // http://localhost:8080/homejsp
     public void home(){
