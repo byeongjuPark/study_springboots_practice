@@ -3,8 +3,10 @@ package com.bottle.study_springboots.service;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.bottle.study_springboots.beans.BoardBean;
+import org.springframework.stereotype.Service;
 
+import com.bottle.study_springboots.beans.BoardBean;
+@Service
 public class DataInfors {
     
     public ArrayList<BoardBean> getDataListWithBoardBean() {
