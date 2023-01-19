@@ -53,8 +53,7 @@ public class CommonCodeOurController {
         return modelAndView;
     }
 
-    // @GetMapping(value = "/list")
-    // @PostMappingMapping(value = "/list")
+
     @RequestMapping(value = { "/list", "/", "" }, method = RequestMethod.GET)
     public ModelAndView list(@RequestParam Map<String, Object> params, ModelAndView modelAndView) {
         Object resultMap = commonCodeOurService.getList(params);
